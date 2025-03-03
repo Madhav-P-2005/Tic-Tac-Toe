@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(131, 22, 255, 0.83);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Back{
+    border:3px solid black;
+    padding:5px 0px;
+    border-radius: 23px;
+    display: flex;
+    position:fixed;
+    left:20px;
+    cursor: pointer;
+    top:20px;
+    margin-bottom: 290px;
+    
+    background-color: rgb(255, 174, 0);
+    color:rgba(0, 0, 0, 0.8);
+    
+}
+
+.Back-text{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 4px;
+    
+}
+
+.Back:hover{
+    background-color: rgb(194, 145, 80);
+}
+.head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+
+/* ✅ Mode Selection Styling */
+.mode-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.computer-mode, .duo-mode {
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: rgb(138, 206, 208);
+    color: black;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.computer-mode:hover, .duo-mode:hover {
+    background-color: rgb(84, 125, 139);
+}
+
+/* ✅ Game & Scoreboard Container */
+.game-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* ✅ Responsive Game Board */
+.Board1, .Board2 {
+    display: none;
+    grid-template-columns: repeat(3, minmax(80px, 1fr));
+    grid-template-rows: repeat(3, minmax(80px, 1fr));
+    gap: 5px;
+    border: 5px solid rgb(38, 20, 36);
+    padding: 10px;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+}
+
+.cell {
+    width: 100%;
+    aspect-ratio: 1/1; /* Maintain square shape */
+    background-color: rgb(0, 0, 0);
+    border: 5px solid rgb(10, 255, 226);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* ✅ Attractive Scoreboard (Right Side) */
+.box, .box2 {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    min-width: 200px;
+    max-width: 20vw;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .box, .box2 {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Board1, .Board2 {
+        width: 240px;
+        height: 240px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .box, .box2 {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .computer-mode, .duo-mode {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+
+@media (min-width :100px) and (max-width : 598px){
+    .Back{
+        justify-content: center;
+        display: flex;
+        margin-top:88vh;
+        border-radius: 45px;
+        margin-right: 1990px;
+    }
+}

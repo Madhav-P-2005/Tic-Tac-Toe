@@ -1,0 +1,119 @@
+*{
+    border : 0;
+    margin :0;
+    padding:0;
+
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;        
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5D1E42; 
+}
+
+
+
+.main-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;          /* Adjusted to leave space for footer */
+    width: 100%;
+}
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+button {
+    background-color: rgb(187, 195, 74);
+    color: black;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    font-weight:900;
+}
+
+
+
+.text{
+    font-family: cursive;
+    letter-spacing: 2px ;
+    font-size: xx-large;
+    font-weight: 1000;
+    border-right: 3px solid;
+    /* width: 50%; */
+    max-width: fit-content;
+    color :rgb(55, 231, 152);
+    white-space :nowrap;              /* It prevents text wrapping, but it might cause overflow on smaller screens. */
+    overflow:hidden;                  /*  To ensure no extra space beyond the emoji. */
+    animation : 
+          typing 3s steps(21, end ) backwards,
+          cursor .4s step-end infinite alternate;
+}
+
+
+
+@keyframes cursor {
+    50% {border-color : transparent}
+}
+
+
+@keyframes typing {
+    from { width : 0; } 
+    to { width : 64%; }
+}
+
+
+
+.end {
+    margin-top: auto; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    justify-content: center;
+    background-color: #ffa216; 
+   color : black;
+}
+
+
+
+a {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: cursive;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+
+
+
+a img {
+    cursor: pointer;
+    padding-left: 5px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+}
