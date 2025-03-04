@@ -23,7 +23,6 @@ body {
     cursor: pointer;
     top:20px;
     margin-bottom: 290px;
-    
     background-color: rgb(255, 174, 0);
     color:rgba(0, 0, 0, 0.8);
     
@@ -49,7 +48,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-/* ✅ Mode Selection Styling */
+
 .mode-container {
     display: flex;
     justify-content: center;
@@ -73,7 +72,7 @@ body {
     background-color: rgb(84, 125, 139);
 }
 
-/* ✅ Game & Scoreboard Container */
+
 .game-container {
     display: flex;
     align-items: center;
@@ -84,7 +83,7 @@ body {
     position: relative;
 }
 
-/* ✅ Responsive Game Board */
+
 .Board1, .Board2 {
     display: none;
     grid-template-columns: repeat(3, minmax(80px, 1fr));
@@ -111,7 +110,7 @@ body {
     cursor: pointer;
 }
 
-/* ✅ Attractive Scoreboard (Right Side) */
+
 .box, .box2 {
     border: 5px solid black;
     border-radius: 20px;
@@ -131,7 +130,7 @@ body {
     font-weight: bold;
 }
 
-/* ✅ Responsive Adjustments */
+
 @media (max-width: 768px) {
     .game-container {
         flex-direction: column;

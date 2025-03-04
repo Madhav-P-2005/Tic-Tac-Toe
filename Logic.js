@@ -4,7 +4,7 @@ function Secondpage(){
 
 
 function HomePage(){
-    window.location.href = "First.html"
+    window.location.href = "index.html"
 }
 
 
