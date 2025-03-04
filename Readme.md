@@ -21,11 +21,6 @@ A simple **Tic-Tac-Toe** game built using **HTML, CSS, and JavaScript**. This pr
 2. Players take turns until there is a winner or a draw.
 3. The game highlights the winning line and announces the result.
 
-## Future Enhancements 🚀
-- Add animations for a smoother UI experience.
-- Implement a score counter for multiple rounds.
-- Improve AI logic for a smarter opponent.
-
 
 ---
 
