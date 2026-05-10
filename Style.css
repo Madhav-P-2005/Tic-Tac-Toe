@@ -82,7 +82,14 @@ button:active {
 
 @keyframes typing {
     from { width: 0; }
-    to   { width: 26ch; }
+    to   { width: 100%; } /* Changed from ch to 100% to prevent cut-off */
+}
+
+/* ── Cell Hover Improvement ─────────────────────────────────── */
+.cell:hover {
+    background-color: rgba(10, 255, 226, 0.1);
+    box-shadow: 0 0 15px rgba(10, 255, 226, 0.5);
+    transform: scale(1.02);
 }
 
 @keyframes cursor {
@@ -130,10 +137,7 @@ button:active {
         font-size: 1.4rem;
     }
 
-    @keyframes typing {
-        from { width: 0; }
-        to   { width: 22ch; }
-    }
+    /* Removed ch override */
 }
 
 
@@ -148,10 +152,7 @@ button:active {
         letter-spacing: 1px;
     }
 
-    @keyframes typing {
-        from { width: 0; }
-        to   { width: 20ch; }
-    }
+    /* Removed ch override */
 
     button {
         width: 160px;
