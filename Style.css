@@ -1,3 +1,8 @@
+/* ──────────────────────────────────────────────────────────────
+   Style.css — Landing Page (index.html)
+   Fully responsive: Desktop → Tablet → Mobile
+   ────────────────────────────────────────────────────────────── */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +21,7 @@ body {
 }
 
 
+/* ── Main Container ─────────────────────────────────────────── */
 .main-container1 {
     display: flex;
     flex-direction: column;
@@ -24,9 +30,11 @@ body {
     text-align: center;
     min-height: 60vh; 
     width: 100%;
+    padding: 0 20px;
 }
 
 
+/* ── Button ─────────────────────────────────────────────────── */
 .button-container {
     display: flex;
     justify-content: center;
@@ -44,9 +52,20 @@ button {
     cursor: pointer;
     border: none;
     font-weight: 900;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: rgb(165, 173, 55);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 
+/* ── Typewriter Heading ──────────────────────────────────────── */
 .text {
     font-family: cursive;
     letter-spacing: 2px;
@@ -55,102 +74,99 @@ button {
     color: rgb(55, 231, 152);
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid rgb(55, 231, 152); /* Cursor effect */
+    border-right: 3px solid rgb(55, 231, 152);
     width: 0;
     display: inline-block;  
     animation: typing 3s steps(30, end) forwards, cursor 0.5s step-end infinite; 
 }
 
-
-
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 26ch; /* Set width based on the number of characters */
-    }
+    from { width: 0; }
+    to   { width: 26ch; }
 }
-
-
-
 
 @keyframes cursor {
-    50% {
-        border-color: transparent;
-    }
+    50% { border-color: transparent; }
 }
 
 
-
-
+/* ── Footer ──────────────────────────────────────────────────── */
 .end {
     margin-top: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120%;
-    position:relative;
-    padding: 8px;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
     background-color: #ffa216;
     color: black;
     flex-wrap: wrap;
     text-align: center;
-}
-
-
-a {
     font-size: 16px;
     font-weight: bold;
     font-family: cursive;
-    text-align: center;
-    margin: 5px;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-
-a img {
+.social-links a img {
     cursor: pointer;
-    padding-left: 5px;
+    transition: transform 0.2s;
+}
+
+.social-links a img:hover {
+    transform: scale(1.2);
 }
 
 
+/* ── Tablet (max 768px) ──────────────────────────────────────── */
+@media (max-width: 768px) {
+    .text {
+        font-size: 1.4rem;
+    }
 
-@media (max-width: 500px) {
+    @keyframes typing {
+        from { width: 0; }
+        to   { width: 22ch; }
+    }
+}
+
+
+/* ── Mobile (max 480px) ──────────────────────────────────────── */
+@media (max-width: 480px) {
     .main-container1 {
         min-height: 50vh;
     }
 
     .text {
-        font-size: 1.5rem; 
-        display: inline-block; 
+        font-size: 1.1rem; 
+        letter-spacing: 1px;
     }
 
     @keyframes typing {
-        from {
-            width: 0;
-        }
-        to {
-            width: 70%; 
-        }
-    }
-
-    .button-container {
-        margin-top: 20px;
+        from { width: 0; }
+        to   { width: 20ch; }
     }
 
     button {
-        width: 90%;
-        max-width: 200px;
+        width: 160px;
+        height: 38px;
+        font-size: 16px;
     }
 
     .end {
         flex-direction: column;
+        gap: 6px;
         padding: 10px;
         font-size: 14px;
     }
 
-    .end a img {
+    .social-links a img {
         width: 25px;
         height: 25px;
     }
